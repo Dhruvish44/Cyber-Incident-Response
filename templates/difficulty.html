@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Select Difficulty{% endblock %}
+
+{% block content %}
+<h2>Select Difficulty Level</h2>
+<form action="/simulate" method="POST">
+    <button type="submit" name="difficulty" value="easy">Easy</button>
+    <button type="submit" name="difficulty" value="medium">Medium</button>
+    <button type="submit" name="difficulty" value="hard">Hard</button>
+</form>
+
+<h2>Other Simulations</h2>
+<form action="/simulate_phishing" method="GET">
+    <button type="submit">Identify Phishing Emails</button>
+</form>
+{% endblock %}

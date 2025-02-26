@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Report{% endblock %}
+
+{% block content %}
+<h2>Your Report</h2>
+<p>Average score: {{ avg_score }}</p>
+
+{% if avg_score %}
+    <h3>Score Progression</h3>
+    <img src="{{ url_for('static', filename='images/score_progression.png') }}" alt="Score Progression">
+    <p><a href="{{ url_for('generate_report') }}">Download PDF Report</a></p>
+{% endif %}
+{% endblock %}

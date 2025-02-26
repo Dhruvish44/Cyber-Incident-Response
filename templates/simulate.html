@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Incident Simulation{% endblock %}
+
+{% block content %}
+<h2>Incident Simulation</h2>
+<p><strong>Incident:</strong> {{ incident.incident }}</p>
+
+<form action="/submit_response" method="POST">
+    <input type="hidden" name="incident_id" value="{{ incident._id }}">
+    {% for option in incident.options %}
+        <div>
+            <input type="radio" id="option{{ loop.index }}" name="response" value="{{ option }}" required>
+            <label for="option{{ loop.index }}">{{ option }}</label>
+        </div>
+    {% endfor %}
+    <button type="submit" class="submit-btn">Submit Response</button>
+</form>
+{% endblock %}

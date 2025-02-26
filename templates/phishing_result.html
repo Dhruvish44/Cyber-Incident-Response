@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Phishing Simulation Results{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Results</title>
+</head>
+<body>
+    <h1>Your Score</h1>
+    <p>You identified {{ score }} out of {{ total }} emails correctly.</p>
+
+    <p>Check out the <a href="{{ url_for('download_pdf') }}">PDF file</a> to see the explanations behind the answers.</p>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Welcome, {{ username }}</h2>
+    <p>Your average score: {{ avg_score }}</p>
+    <a href="{{ url_for('simulate') }}" class="btn">Start a new simulation</a>
+</div>
+{% endblock %}

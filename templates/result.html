@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Simulation Result{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Simulation Result</h2>
+    <p>{{ result }}</p>
+
+    {% if try_again %}
+        <a href="{{ url_for('simulate') }}" class="btn btn-primary">Try another simulation</a>
+    {% elif next_simulation %}
+        <a href="{{ url_for('show_simulation') }}" class="btn btn-primary">Next Question</a>
+    {% endif %}
+</div>
+{% endblock %}

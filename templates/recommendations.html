@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Recommendations{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Recommendations</h2>
+    <p>Based on your recent performance, here are some tailored recommendations to help you improve your cyber incident response:</p>
+    <ul>
+        <li>Review the <a href="{{ url_for('glossary') }}">glossary</a> to understand key cybersecurity concepts.</li>
+        <li>Consider running more simulations at different difficulty levels to improve your skills.</li>
+        <li>Explore the <a href="{{ url_for('resources') }}">resources</a> for additional guidance and best practices.</li>
+        <li>Focus on improving your response time and accuracy for better scores.</li>
+    </ul>
+</div>
+{% endblock %}

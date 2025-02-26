@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Resources{% endblock %}
+
+{% block content %}
+<h2>Resources</h2>
+<ul>
+    <li><a href="https://www.cisa.gov/cyber-incident-response" target="_blank">CISA Cyber Incident Response</a></li>
+    <li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf" target="_blank">NIST Incident Handling Guide</a></li>
+    <li><a href="https://www.sans.org/cyber-security/incident-response" target="_blank">SANS Incident Response Resources</a></li>
+    <li><a href="{{ url_for('static', filename='pdf/gdpr-email-phishing-prevention-23Q3.pdf') }}" download>GDPR Email Phishing Prevention Q3 2023 (Download PDF)</a></li>
+    <li><a href="{{ url_for('static', filename='pdf/Familiarize yourself with phishing attacks.pdf') }}" download>Familiarize yourself with Phishing Attacks (Download PDF)</a></li>
+
+</ul>
+{% endblock %}
